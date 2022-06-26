@@ -4,7 +4,7 @@
 # Will use rear motor throttle for nose down.
 
 # Motors
-R: 3y_pluspitch
+R: 3y
 
 Tilt mechanism servo mixer
 ---------------------------
