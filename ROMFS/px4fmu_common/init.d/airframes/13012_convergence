@@ -6,18 +6,14 @@
 # @class VTOL
 #
 # @maintainer Andreas Antener <andreas@uaventure.com>
+# modified by Phil Baldwin 6/26/22
 #
 # @output MAIN1 Motor right
 # @output MAIN2 Motor left
 # @output MAIN3 Motor back
-# @output MAIN4 empty
-# @output MAIN5 Tilt servo right
-# @output MAIN6 Tilt servo left
-# @output MAIN7 Elevon right
-# @output MAIN8 Elevon left
-#
-# @board px4_fmu-v2 exclude
-# @board bitcraze_crazyflie exclude
+# @output MAIN4 Tilt servo right
+# @output MAIN5 Tilt servo left
+# @output MAIN6 Ailerons
 #
 
 . ${R}etc/init.d/rc.vtol_defaults
@@ -67,7 +63,7 @@ param set-default VT_TRANS_P2_DUR 1.3
 param set-default VT_ELEV_MC_LOCK 0
 param set-default VT_TYPE 1
 
-set MIXER vtol_convergence
+set MIXER vtol_convergence_mini
 
 if ! ver hwcmp MATEK_H743
 then
